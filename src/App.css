@@ -1,0 +1,62 @@
+ * {
+   margin: 0;
+ }
+
+ .App {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(228, 208, 208, 0);
+ }
+
+ .json__input {
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+
+ .json__container {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+ }
+
+ .json__container > input {
+   height: 30px;
+ }
+
+ .donwload__button {
+   padding: 20px;
+   background-color: #0066ff;
+   color: white;
+   border-radius: 20px;
+   border: none;
+   opacity: 80%;
+   cursor: pointer;
+ }
+
+ .donwload__button.hide{
+   display: none;
+ }
+
+ .donwload__button:disabled{
+  pointer-events: none;
+ }
+
+ .donwload__button:active:hover {
+  opacity: 100%;
+ }
+
+ .error__message{
+   color: red;
+   margin-top: 20px;
+ }
+
+ .checkbox__group{
+   margin-top: 5px;
+ }
+
+ .checkbox__group > input{
+  margin-right: 5px;
+}
