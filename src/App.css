@@ -32,7 +32,7 @@
    color: white;
    border-radius: 20px;
    border: none;
-   opacity: 80%;
+   opacity: 0.8;
    cursor: pointer;
  }
 
@@ -45,7 +45,7 @@
  }
 
  .donwload__button:active:hover {
-  opacity: 100%;
+  opacity: 1;
  }
 
  .error__message{
