@@ -27,7 +27,7 @@ function Format() {
         <div className="container">
       <div className="container__inner">
         <div className="json__container">
-          <h3>Enter your JSON here:</h3>
+          <h3>Format your JSON here:</h3>
           <p className="error__message">{error}</p>
           <textarea
             className="json__input"
@@ -35,7 +35,7 @@ function Format() {
             cols="60"
             value={json}
             onChange={(e) => setJson(e.target.value)}
-            placeholder="Enter JSON Array"
+            placeholder="Enter your JSON"
           ></textarea>
         </div>
         <div className="format__button__group">
