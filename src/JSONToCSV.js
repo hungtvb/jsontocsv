@@ -76,7 +76,7 @@ function JSONToCSV() {
     <div className="container">
       <div className="container__inner">
         <div className="json__container">
-          <h3>Enter your JSON Array here:</h3>
+          <h3>Convert your JSON to CSV file:</h3>
           <p className="error__message">{error}</p>
           <textarea
             className="json__input"
@@ -89,7 +89,7 @@ function JSONToCSV() {
 
           <input
             type="text"
-            placeholder="Enter file name"
+            placeholder="Enter your file name"
             value={fileName}
             onChange={(e) => setFileName(e.target.value)}
           />
