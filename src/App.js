@@ -3,9 +3,10 @@ import "./App.css";
 
 function App() {
   const [json, setJson] = useState("");
-  const [fileName, setFileName] = useState("result");
+  const [fileName, setFileName] = useState("");
   const [error, setError] = useState("");
   const [showHeader, setShowHeader] = useState(true);
+  const [dowloaded, setDownloaded] = useState(false);
 
   const converJSONToCSV = (e) => {
     e.preventDefault();
@@ -56,25 +57,28 @@ function App() {
       document.body.appendChild(link); // Required for FF
 
       link.click();
+      setDownloaded(true);
   }
 
   const resetData = () => {
     setError("");
     setJson([]);
+    setDownloaded(false);
   }
 
   const isReadyToDownload = () => {
-    return json && fileName && !error;
+    return json && fileName;
   }
 
   return (
     <div className="App">
+      <div className="container">
       <div className="json__container">
         <h3>Enter you JSON Array here:</h3>
         <p className="error__message">{error}</p>
         <textarea
           className="json__input"
-          rows="10"
+          rows="15"
           cols="60"
           value={json}
           onChange={(e) => setJson(e.target.value)}
@@ -91,19 +95,24 @@ function App() {
           <label>Show header</label>
         </div>
       </div>
+      <div className="button__group">
       <button
-        className={`donwload__button ${!isReadyToDownload ? 'hide' : ''}`}
+        className="donwload__button"
         onClick={converJSONToCSV}
-        disabled={!json}
+        disabled={!isReadyToDownload()}
       >
         DOWLOAD CSV
       </button>
       <button
-        className={`donwload__button ${isReadyToDownload ? 'hide' : ''}`}
+        className={`donwload__button ${!dowloaded ? 'hide' : ''}`}
         onClick={resetData}
       >
         RESET
       </button>
+
+      </div>
+      </div>
+      
     </div>
   );
 }

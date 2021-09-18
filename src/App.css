@@ -1,6 +1,3 @@
- * {
-   margin: 0;
- }
 
  .App {
   display: flex;
@@ -8,22 +5,47 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(228, 208, 208, 0);
+  background: linear-gradient(90deg, rgba(231,251,63,1) 0%, rgba(147,252,70,1) 100%);
  }
 
- .json__input {
-   margin-top: 10px;
-   margin-bottom: 10px;
+ .container {
+   width: 600px;
+   height: 550px;
+   padding: 10px;
+   background-color: rgb(255, 255, 255);
+   border-radius: 10px;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
  }
-
+ 
  .json__container {
    display: flex;
    flex-direction: column;
    margin-bottom: 20px;
  }
 
+ .json__input {
+   margin-top: 10px;
+   margin-bottom: 10px;
+   resize: none;
+   overflow: auto;
+ }
+
  .json__container > input {
    height: 30px;
+ }
+
+ .button__group{
+   flex: 1;
+   min-width: 450px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 20px;
+   margin-top: 40px;
+ }
+
+ .button__group > button:not(:last-child) {
+    margin-right: 20px;
  }
 
  .donwload__button {
@@ -34,10 +56,12 @@
    border: none;
    opacity: 0.8;
    cursor: pointer;
+   width: 200px;
  }
 
  .donwload__button.hide{
-   display: none;
+  display: none !important;
+  visibility: hidden !important;
  }
 
  .donwload__button:disabled{
@@ -50,11 +74,10 @@
 
  .error__message{
    color: red;
-   margin-top: 20px;
  }
 
  .checkbox__group{
-   margin-top: 5px;
+   margin-top: 10px;
  }
 
  .checkbox__group > input{
