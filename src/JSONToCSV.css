@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+  
+   .container__inner {
+     width: 600px;
+     padding: 10px;
+     background-color: rgb(255, 255, 255);
+     border-radius: 10px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   }
+   
+   .json__container {
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 20px;
+   }
+  
+   .json__input {
+     margin-top: 10px;
+     margin-bottom: 10px;
+     resize: none;
+     overflow: auto;
+   }
+  
+   .json__container > input {
+     height: 30px;
+   }
+  
+   .button__group{
+     flex: 1;
+     min-width: 450px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding-top: 20px;
+     margin-top: 40px;
+   }
+  
+   .button__group > button:not(:last-child) {
+      margin-right: 20px;
+   }
+  
+   .donwload__button {
+     padding: 20px;
+     background-color: #0066ff;
+     color: white;
+     border-radius: 20px;
+     border: none;
+     opacity: 0.8;
+     cursor: pointer;
+     width: 200px;
+   }
+  
+   .donwload__button.hide{
+    display: none !important;
+    visibility: hidden !important;
+   }
+  
+   .donwload__button:disabled{
+    pointer-events: none;
+   }
+  
+   .donwload__button:hover {
+    opacity: 1;
+   }
+  
+   .error__message{
+     color: red;
+   }
+  
+   .checkbox__group{
+     margin-top: 10px;
+   }
+  
+   .checkbox__group > input{
+    margin-right: 5px;
+  }
